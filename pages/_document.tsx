@@ -2,6 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
 
 export default function Document() {
+  const GTM = "NZN5HT6";
   return (
     <Html>
       <Head>
@@ -11,17 +12,19 @@ export default function Document() {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-NZN5HT6');`,
+          })(window,document,'script','dataLayer','GTM-${GTM}');`,
           }}
         ></script>
       </Head>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZN5HT6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`,
-          }}
-        ></script>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-${GTM}"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <Main />
         <NextScript />
       </body>
