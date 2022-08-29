@@ -11,11 +11,11 @@ const Home: NextPage = () => {
   console.log(variant);
   console.log(typeof variant);
 
-  if (variant === 1) {
+  if (variant === "1") {
     return <First />;
   }
 
-  if (variant === 2) {
+  if (variant === "2") {
     return <Second />;
   }
 
