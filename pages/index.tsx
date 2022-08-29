@@ -10,7 +10,19 @@ const Home: NextPage = () => {
   const variant = useExperiment("i2Ri3Ga8SoKm_p1maUngGA");
   console.log(variant);
 
-  return <div className={styles.container}>{variant === 1 ? <First /> : <Second />}</div>;
+  if (variant === 1) {
+    return <First />;
+  }
+
+  if (variant === 2) {
+    return <Second />;
+  }
+
+  return (
+    <div>
+      QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQqq
+    </div>
+  );
 };
 
 export default Home;
