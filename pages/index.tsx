@@ -9,6 +9,7 @@ import Second from "./second";
 const Home: NextPage = () => {
   const variant = useExperiment("i2Ri3Ga8SoKm_p1maUngGA");
   console.log(variant);
+  console.log(typeof variant);
 
   if (variant === 1) {
     return <First />;
