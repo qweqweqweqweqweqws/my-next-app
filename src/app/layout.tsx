@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="canonical" href={process.env.NEXT_PUBLIC_URL} />
+        <link rel="manifest" href="./manifest.webmanifest" />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
